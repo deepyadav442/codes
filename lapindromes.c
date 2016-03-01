@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int t,b,i,c,d;
+	char a[100000];
+	scanf("%d",&t);
+	//fflush(stdin);
+	while(getchar()!='\n');
+	while(t--){
+		gets(a);
+		//puts(a);
+		b=strlen(a);
+		//printf("\n%d\n",b);
+		c=0;
+		d=0;
+		if(b%2==0)
+		{
+			for(i=0;i<b/2;i++)
+				c=c+a[i];
+			for(i=b/2;i<b;i++)
+				d=d+a[i];
+			if(c==d)
+				printf("YES\n");
+			else
+				printf("NO\n");
+		}
+		else
+		{
+			for(i=0;i<b/2;i++)
+				c=c+a[i];
+			//printf("%d",c);
+			for(i=(b/2+1);i<b;i++)
+				d=d+a[i];
+			//printf("%d",d);
+			if(c==d)
+				printf("YES\n");
+			else
+				printf("NO\n");
+		}
+	}
+}
