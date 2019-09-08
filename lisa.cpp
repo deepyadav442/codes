@@ -12,7 +12,7 @@ int main()
         //if(pagecount<=arr[i]){
           //      cout<<pagecount<<"hello";
           //  count++;
-        //}
+        ////}
         previous=pagecount;
         if(arr[i]%k==0)
             pagecount+=arr[i]/k;
