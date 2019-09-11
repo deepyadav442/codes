@@ -84,10 +84,12 @@ node* deletion(node *head,int place)
 		return (head->next);
 	else if(place==length){
 		node *p=head;
-		while(p->next!=NULL)
+		while((p->next->next)!=NULL)
 		{
-			free(p);
+			p=p->next;
 		}
+		p->next=NULL;
+	
 	}
 	else{
 		node *p=head,*q=NULL;
@@ -114,13 +116,12 @@ int main()
 	//print_nodes(head);
 	//head=insert(head,list_length(head)+1);
 	//print_nodes(head);
-	deletion(head,1);
+	//head=deletion(head,1);
+	//print_nodes(head);
+	//head=deletion(head,3);
+	//print_nodes(head);
+	head=deletion(head,5);
 	print_nodes(head);
-	deletion(head,3);
-	print_nodes(head);
-	deletion(head,6);
-	print_nodes(head);
+	printf("\n%d\n",list_length(head));
 	return 0;
 }
-
-
