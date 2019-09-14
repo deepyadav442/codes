@@ -116,8 +116,8 @@ int main()
 	//print_nodes(head);
 	//head=insert(head,list_length(head)+1);
 	//print_nodes(head);
-	//head=deletion(head,1);
-	//print_nodes(head);
+	head=deletion(head,1);
+	print_nodes(head);
 	head=deletion(head,3);
 	print_nodes(head);
 	head=deletion(head,5);
