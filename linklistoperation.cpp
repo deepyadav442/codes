@@ -122,6 +122,6 @@ int main()
 	//print_nodes(head);
 	//head=deletion(head,5);
 	//print_nodes(head);
-	//printf("\n%d\n",list_length(head));
+	printf("\n%d\n",list_length(head));
 	return 0;
 }
