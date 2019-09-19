@@ -102,6 +102,10 @@ node* deletion(node *head,int place)
 	return head;
 
 }
+void traverse_by_jump(node *head)
+{
+	node *p=head
+}
 int main()
 {
 	int n;
