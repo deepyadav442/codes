@@ -32,14 +32,60 @@ typedef struct node{
 	struct node *left,*right;
 }node;
 class BT{
-	public:	
-	BT(int value){
-		this.data=value;
-		left=right=NULL;
-	}
-	node* create(int);
-	void pretraversal(node*);
+	public:
+	node* insert(node*,int);
+	node* create_node(int);
+	//node* preorder(node*);
+	void inorder(node*);
+	//node* postorder(node*);
 };
+node* BT::create_node(int value)
+{
+	cout<<"2"<<endl;
+	node *n = new node();
+	n->data=value;
+	n->left=n->right=NULL;
+	return n;
+	
+}
+node* BT::insert(node *root,int num)
+{
+	if(root==NULL)	{
+		return create_node(num);
+	}
+	else if(root->data >num)
+		insert(root->left,num);
+	else
+		insert(root->right,num);
+	return root;
+}
+void BT::inorder(node *root)
+{
+	cout<<"5"<<endl;
+	while(root!=NULL){
+		cout<<"6"<<endl;
+		inorder(root->left);
+		printf("Data for node is :");
+		pi(root->data);
+		newline;
+		inorder(root->right);				
+	}
 
- 
+}
+int main()
+{
+	int value,i;
+	node *root;
+	BT b;
+	cout<<"1"<<endl;
+	root=b.insert(root,2); 
+	root=b.insert(root,4);
+	root=b.insert(root,6);
+	root=b.insert(root,3);
+	root=b.insert(root,6);	
+	root=b.insert(root,7);
+	cout<<"4"<<endl;
+	b.inorder(root);	
+	return 0;
+}
 	
